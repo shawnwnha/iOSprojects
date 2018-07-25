@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "project0.0.3/AppDelegate.swift"
+            timestampString = "554242384.8458689"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "project0_0_3.AppDelegate.__deallocating_deinit"
+                  moduleName = "project0.0.3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wonsangnha/Downloads/Swift/project0.0.3/project0.0.3/AppDelegate.swift"
+                  timestampString = "554190542.207552"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "project0_0_3.AppDelegate.__allocating_init() -&gt; project0_0_3.AppDelegate"
+                  moduleName = "project0.0.3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wonsangnha/Downloads/Swift/project0.0.3/project0.0.3/AppDelegate.swift"
+                  timestampString = "554190542.210337"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "project0_0_3.AppDelegate.init() -&gt; project0_0_3.AppDelegate"
+                  moduleName = "project0.0.3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wonsangnha/Downloads/Swift/project0.0.3/project0.0.3/AppDelegate.swift"
+                  timestampString = "554190542.2119451"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "project0.0.3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wonsangnha/Downloads/Swift/project0.0.3/project0.0.3/AppDelegate.swift"
+                  timestampString = "554190542.213506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
