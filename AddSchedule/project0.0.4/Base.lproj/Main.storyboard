@@ -68,7 +68,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="VHB-ww-twZ" id="fgg-fO-FF2"/>
+                        <outlet property="tableView" destination="VHB-ww-twZ" id="UDM-IR-P2W"/>
                         <outlet property="taskField" destination="pWa-BD-z1P" id="BXR-Zd-9li"/>
                     </connections>
                 </viewController>

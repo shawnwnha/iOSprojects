@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var taskField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    
 
     @IBAction func buttonPressed(_ sender: UIButton) {
         if let taskFieldInput = taskField.text{
@@ -37,18 +36,29 @@ class ViewController: UIViewController {
     
 }
 
+func randomInt() -> Int{
+    let random = arc4random_uniform(100)+1
+    print(random)
+    return Int(random)
+}
+
 extension ViewController: UITableViewDataSource, UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         cell.textLabel?.text = tasks[indexPath.row]
+        cell.detailTextLabel?.text = String(randomInt())
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("section: \(indexPath.section) and row: \(indexPath.row)")
         tasks.remove(at: indexPath.row)
         tableView.reloadData()
     }
+    
 }
