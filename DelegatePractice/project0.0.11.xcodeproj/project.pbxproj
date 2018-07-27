@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E77E842210B029200FFEFB3 /* project0.0.11.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E77E840210B029200FFEFB3 /* project0.0.11.xcdatamodeld */; };
 		1E798B15210A5568000C6E70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E798B14210A5568000C6E70 /* AppDelegate.swift */; };
 		1E798B17210A5568000C6E70 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E798B16210A5568000C6E70 /* TableViewController.swift */; };
 		1E798B1A210A5568000C6E70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E798B18210A5568000C6E70 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E77E841210B029200FFEFB3 /* project0.0.11.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = project0.0.11.xcdatamodel; sourceTree = "<group>"; };
 		1E798B11210A5568000C6E70 /* project0.0.11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project0.0.11.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E798B14210A5568000C6E70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E798B16210A5568000C6E70 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				1E798B42210A5F37000C6E70 /* SecondTableTableViewController.swift */,
 				1E798B14210A5568000C6E70 /* AppDelegate.swift */,
+				1E77E840210B029200FFEFB3 /* project0.0.11.xcdatamodeld */,
 				1E798B16210A5568000C6E70 /* TableViewController.swift */,
 				1E798B18210A5568000C6E70 /* Main.storyboard */,
 				1E798B1B210A5569000C6E70 /* Assets.xcassets */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E798B43210A5F37000C6E70 /* SecondTableTableViewController.swift in Sources */,
+				1E77E842210B029200FFEFB3 /* project0.0.11.xcdatamodeld in Sources */,
 				1E798B47210A6CD5000C6E70 /* combinedDelegate.swift in Sources */,
 				1E798B17210A5568000C6E70 /* TableViewController.swift in Sources */,
 				1E798B15210A5568000C6E70 /* AppDelegate.swift in Sources */,
@@ -586,6 +590,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1E77E840210B029200FFEFB3 /* project0.0.11.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1E77E841210B029200FFEFB3 /* project0.0.11.xcdatamodel */,
+			);
+			currentVersion = 1E77E841210B029200FFEFB3 /* project0.0.11.xcdatamodel */;
+			path = project0.0.11.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1E798B09210A5568000C6E70 /* Project object */;
 }

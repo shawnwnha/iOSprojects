@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UITableViewController, combinedDelegate {
-    var BucketList = ["잠순아", "일어나랏", "얼른!!!", "해가 떳다!!!", "사랑해!"]
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //setting up core-data context
+    
+    var items = [BucketListItems]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("!")
+        fetchAllItems()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -23,26 +26,43 @@ class TableViewController: UITableViewController, combinedDelegate {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BucketList.count
+        return items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "protoCell", for: indexPath)
-        cell.textLabel?.text = BucketList[indexPath.row]
+        cell.textLabel?.text = items[indexPath.row].textitem!
         return cell
     }
 
-    
     override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         performSegue(withIdentifier: "editSegue", sender: indexPath)
     }
     
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        BucketList.remove(at: indexPath.row)
+        let item = items[indexPath.row]
+        managedObjectContext.delete(item)
+        do{
+            try managedObjectContext.save()
+        }
+        catch{
+            print("\(error)")
+        }
+        items.remove(at: indexPath.row)
         tableView.reloadData()
     }
     
+    func fetchAllItems(){
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "BucketListItems")
+        do {
+            let result = try managedObjectContext.fetch(request)
+            items = result as! [BucketListItems]
+        }
+        catch {
+            print ("\(error)")
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "addSegue"{
@@ -56,8 +76,8 @@ class TableViewController: UITableViewController, combinedDelegate {
             // assigns this controller to the next controller through delegate
             
             let indexPath = sender as! NSIndexPath // get indexpath from tableview above
-            let item = BucketList[indexPath.row]
-            secondController.prepopText = item
+            let item = items[indexPath.row]
+            secondController.prepopText = item.textitem!
             secondController.indexPath = indexPath // 2. send indexpath
         }
 
@@ -70,9 +90,18 @@ class TableViewController: UITableViewController, combinedDelegate {
     
     func saveButtonPressed(by: SecondTableTableViewController, with text: String, at indexPath:NSIndexPath?){
         if let ip = indexPath{
-            BucketList[ip.row] = text
+            let item = items[ip.row]
+            item.textitem = text
         }else{
-            BucketList.append(text)
+            let item = NSEntityDescription.insertNewObject(forEntityName: "BucketListItems", into: managedObjectContext) as! BucketListItems
+            item.textitem = text
+            items.append(item)
+        }
+        do{
+            try managedObjectContext.save()
+        }
+        catch{
+            print("\(error)")
         }
         tableView.reloadData()
         dismiss(animated: false, completion: nil)
