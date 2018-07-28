@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fmF-Ru-zsG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="9jF-6S-7px">
+            <objects>
+                <viewController id="fmF-Ru-zsG" customClass="ViewController" customModule="project0_0_14" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hez-Z7-BPU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dXR-vz-TCL">
+                                <rect key="frame" x="0.0" y="20" width="375" height="606"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProtoCell" id="ycj-Uu-a2u" customClass="Cells" customModule="project0_0_14" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ycj-Uu-a2u" id="CdM-gX-CiL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHR-U0-jmG">
+                                                    <rect key="frame" x="325" y="4" width="30" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="+">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="plusPressed:" destination="ycj-Uu-a2u" eventType="touchUpInside" id="6j0-yz-PLW"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6E-Lx-Xo8">
+                                                    <rect key="frame" x="273" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlN-ep-hia">
+                                                    <rect key="frame" x="20" y="4" width="30" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <state key="normal" title="-">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="minusPressed:" destination="ycj-Uu-a2u" eventType="touchUpInside" id="5mY-Nk-yyW"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.33695937081421451" green="0.5982163696339502" blue="0.71385200777202074" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstItem="M6E-Lx-Xo8" firstAttribute="centerY" secondItem="CdM-gX-CiL" secondAttribute="centerY" id="27t-fd-luU"/>
+                                                <constraint firstItem="tlN-ep-hia" firstAttribute="leading" secondItem="CdM-gX-CiL" secondAttribute="leading" constant="20" id="Dvi-Qg-5DR"/>
+                                                <constraint firstItem="cHR-U0-jmG" firstAttribute="centerY" secondItem="CdM-gX-CiL" secondAttribute="centerY" id="VLC-SO-ml1"/>
+                                                <constraint firstItem="cHR-U0-jmG" firstAttribute="leading" secondItem="M6E-Lx-Xo8" secondAttribute="trailing" constant="10" id="kHs-9z-BW4"/>
+                                                <constraint firstAttribute="trailing" secondItem="cHR-U0-jmG" secondAttribute="trailing" constant="20" id="mMA-sB-sSC"/>
+                                                <constraint firstItem="tlN-ep-hia" firstAttribute="centerY" secondItem="CdM-gX-CiL" secondAttribute="centerY" id="qr3-yK-EgV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="digitLabel" destination="M6E-Lx-Xo8" id="Fru-rn-W65"/>
+                                            <outlet property="minusButton" destination="tlN-ep-hia" id="YlE-SZ-h5U"/>
+                                            <outlet property="plusButton" destination="cHR-U0-jmG" id="dsZ-6v-iGh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9q6-zQ-pai">
+                                <rect key="frame" x="10" y="636" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1du-33-YuB"/>
+                                    <constraint firstAttribute="width" constant="85" id="uZQ-ka-iio"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqK-y1-Doc">
+                                <rect key="frame" x="103" y="657" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VCJ-45-hVU" firstAttribute="bottom" secondItem="DqK-y1-Doc" secondAttribute="bottom" constant="10" id="2lg-jE-Lgs"/>
+                            <constraint firstItem="dXR-vz-TCL" firstAttribute="top" secondItem="VCJ-45-hVU" secondAttribute="top" id="31f-Mg-nkN"/>
+                            <constraint firstItem="9q6-zQ-pai" firstAttribute="leading" secondItem="VCJ-45-hVU" secondAttribute="leading" constant="10" id="6gL-xt-rA5"/>
+                            <constraint firstItem="dXR-vz-TCL" firstAttribute="leading" secondItem="VCJ-45-hVU" secondAttribute="leading" id="7R6-bS-2IZ"/>
+                            <constraint firstItem="VCJ-45-hVU" firstAttribute="bottom" secondItem="9q6-zQ-pai" secondAttribute="bottom" constant="10" id="Ar7-Sm-r1d"/>
+                            <constraint firstItem="9q6-zQ-pai" firstAttribute="top" secondItem="dXR-vz-TCL" secondAttribute="bottom" constant="10" id="B1R-HP-DsR"/>
+                            <constraint firstItem="DqK-y1-Doc" firstAttribute="leading" secondItem="9q6-zQ-pai" secondAttribute="trailing" constant="8" id="Cex-LJ-bWW"/>
+                            <constraint firstItem="dXR-vz-TCL" firstAttribute="trailing" secondItem="VCJ-45-hVU" secondAttribute="trailing" id="Hwi-bZ-Qad"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VCJ-45-hVU"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="dXR-vz-TCL" id="33D-Vp-XTy"/>
+                        <outlet property="totalSum" destination="DqK-y1-Doc" id="OoG-Q3-upu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1A9-YB-1vd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47.200000000000003" y="-203.74812593703149"/>
+        </scene>
+    </scenes>
+</document>

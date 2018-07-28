@@ -10,19 +10,17 @@ import UIKit
 import CoreData
 
 class TableViewController: UITableViewController, combinedDelegate {
-    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //setting up core-data context
+    let managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext // setting up core-data context
     
     var items = [BucketListItems]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchAllItems()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,9 +52,9 @@ class TableViewController: UITableViewController, combinedDelegate {
     }
     
     func fetchAllItems(){
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "BucketListItems")
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "BucketListItems") // designate an entity
         do {
-            let result = try managedObjectContext.fetch(request)
+            let result = try managedObjectContext.fetch(request) // fetch all data from an entity
             items = result as! [BucketListItems]
         }
         catch {
@@ -78,13 +76,13 @@ class TableViewController: UITableViewController, combinedDelegate {
             let indexPath = sender as! NSIndexPath // get indexpath from tableview above
             let item = items[indexPath.row]
             secondController.prepopText = item.textitem!
-            secondController.indexPath = indexPath // 2. send indexpath
+            secondController.indexPath = indexPath // send indexpath
         }
 
     }
     
     func cancelButtonPressed(by: SecondTableTableViewController) {
-        print("this is fucking first controller working as delegate of second controller: -- Canceled")
+        print("this is first controller working as delegate of second controller: -- Canceled")
         dismiss(animated: false, completion: nil)
     }
     
@@ -94,6 +92,7 @@ class TableViewController: UITableViewController, combinedDelegate {
             item.textitem = text
         }else{
             let item = NSEntityDescription.insertNewObject(forEntityName: "BucketListItems", into: managedObjectContext) as! BucketListItems
+            // create a data in entity 
             item.textitem = text
             items.append(item)
         }

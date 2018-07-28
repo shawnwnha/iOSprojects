@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LH8-8A-yJ0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="26B-mN-tTE">
+            <objects>
+                <tableViewController id="LH8-8A-yJ0" customClass="TableViewController" customModule="project0_0_13" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IMu-hN-an7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="100" id="MKA-y3-ase" userLabel="CustomCell" customClass="CustomCell" customModule="project0_0_13" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKA-y3-ase" id="wNa-hQ-WSb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4I-M1-rGG">
+                                            <rect key="frame" x="317" y="39.5" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgY-mP-aL9">
+                                            <rect key="frame" x="16" y="35" width="46" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NgY-mP-aL9" firstAttribute="centerY" secondItem="wNa-hQ-WSb" secondAttribute="centerY" id="AQq-KH-qLV"/>
+                                        <constraint firstItem="Q4I-M1-rGG" firstAttribute="baseline" secondItem="NgY-mP-aL9" secondAttribute="baseline" id="I69-aW-lz5"/>
+                                        <constraint firstItem="Q4I-M1-rGG" firstAttribute="trailing" secondItem="wNa-hQ-WSb" secondAttribute="trailingMargin" id="S5u-zo-Mdk"/>
+                                        <constraint firstItem="Q4I-M1-rGG" firstAttribute="centerY" secondItem="wNa-hQ-WSb" secondAttribute="centerY" id="Skc-R1-wPU"/>
+                                        <constraint firstItem="NgY-mP-aL9" firstAttribute="leading" secondItem="wNa-hQ-WSb" secondAttribute="leadingMargin" id="ccg-sK-9Fz"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="CellButton" destination="NgY-mP-aL9" id="Cvv-bW-qFc"/>
+                                    <outlet property="CellLabel" destination="Q4I-M1-rGG" id="WWa-EM-7qY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LH8-8A-yJ0" id="MRk-dG-wS0"/>
+                            <outlet property="delegate" destination="LH8-8A-yJ0" id="HIh-NF-902"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgg-d1-VXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-484.40779610194909"/>
+        </scene>
+    </scenes>
+</document>
