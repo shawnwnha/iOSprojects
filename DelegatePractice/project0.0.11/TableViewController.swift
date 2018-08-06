@@ -37,7 +37,6 @@ class TableViewController: UITableViewController, combinedDelegate {
         performSegue(withIdentifier: "editSegue", sender: indexPath)
     }
     
-    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let item = items[indexPath.row]
         managedObjectContext.delete(item)
@@ -91,6 +90,7 @@ class TableViewController: UITableViewController, combinedDelegate {
             let item = items[ip.row]
             item.textitem = text
         }else{
+            // ########################################################
             let item = NSEntityDescription.insertNewObject(forEntityName: "BucketListItems", into: managedObjectContext) as! BucketListItems
             // create a data in entity 
             item.textitem = text
